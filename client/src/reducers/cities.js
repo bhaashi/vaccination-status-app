@@ -1,6 +1,6 @@
 import { FETCH_CITIES,FETCH_CITY,UPDATE_CITY } from "../constants/actionTypes";
 
-export const cityListReducer = (cities=[],action) =>{
+export const cityLists = (cities=[],action) =>{
     switch (action.type) {
         case FETCH_CITIES:
             return action.payload;
@@ -11,7 +11,7 @@ export const cityListReducer = (cities=[],action) =>{
     }
 }
 
-export const cityDetailsReducer = (cityDetails={},action) => {
+export const cityDetails = (cityDetails={},action) => {
     switch (action.type) {
         case FETCH_CITY:
             return {loading:false,city:action.payload}

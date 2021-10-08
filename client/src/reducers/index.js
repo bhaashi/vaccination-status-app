@@ -1,8 +1,9 @@
 import { combineReducers } from "redux";
-import { countryReducer,stateReducer } from "./countryStates";
-import {cityListReducer,cityDetailsReducer} from "./cities";
+import  {countries,states} from "./countryStates";
+import { cityLists,cityDetails } from "./cities";
 
 
-export default combineReducers({
-   countryReducer,stateReducer,cityListReducer,cityDetailsReducer
+
+export const rootReducer =  combineReducers({
+   countries,states,cityLists,cityDetails
 });

@@ -70,7 +70,7 @@ const ViewVaccineDetails = () => {
     return (
         <Container component="section" maxWidth="lg" className={classes.root}>
             <Grid container spacing={3} alignItems="stretch">
-         
+            <Grid item xs={2}>
             <FormControl className={classes.formControl}>
           <InputLabel htmlFor="country-native-simple">Country</InputLabel>
           <Select
@@ -87,6 +87,8 @@ const ViewVaccineDetails = () => {
             ))}
           </Select>
         </FormControl>
+        </Grid>
+        <Grid item xs={2}>
         <FormControl className={classes.formControl}>
           <InputLabel htmlFor="state-native-simple">State</InputLabel>
           <Select
@@ -104,11 +106,14 @@ const ViewVaccineDetails = () => {
             )): <option value="" />}
           </Select>
         </FormControl>
+        </Grid>
+        <Grid item xs={2}>
         <FormControlLabel
         control={<Switch checked={chartView} onChange={(event) => {
           setChartView(event.target.checked)}}/>}
         label="Chart View"
       />
+      </Grid>
         </Grid>
         <Grid container spacing={3} alignItems="stretch">
           {chartView ? <ViewCityChart/> :<ViewCityTable />}

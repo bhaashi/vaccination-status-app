@@ -1,6 +1,6 @@
 import { FETCH_COUNTRIES,FETCH_STATES } from "../constants/actionTypes";
 
-export const countryReducer = (countries=[],action) =>{
+export const countries= (countries=[],action) =>{
     switch (action.type) {
         case FETCH_COUNTRIES:
             return action.payload;
@@ -10,7 +10,7 @@ export const countryReducer = (countries=[],action) =>{
 }
 
 
-export const stateReducer = (states=[],action) =>{
+export const states = (states=[],action) =>{
     switch (action.type) {
         case FETCH_STATES:
             return action.payload;

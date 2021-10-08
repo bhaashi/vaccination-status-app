@@ -12,7 +12,7 @@ import {useSelector} from "react-redux";
 
 
 const ViewCityTable = () =>{
-    const cities = useSelector((state) => state.cities);
+    const cities = useSelector((state) => state.cityLists);
 
     return(
     <Paper className="container">
